@@ -1,0 +1,9 @@
+# Step 1: Use the official lightweight Nginx stable image from Docker Hub
+FROM nginx:alpine
+
+# Step 2: Copy your static frontend website assets into the default Nginx web directory
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+
+# Step 3: Expose standard web traffic port 80 to the outside world
+EXPOSE 80
